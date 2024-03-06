@@ -1,13 +1,114 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  font-size: 62.5%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-size: 2.4rem;
+  font-family: sans-serif;
+  color: #5a3e2b;
+  font-family: "Quicksand";
+  font-weight: 500;
+}
+
+h1 {
+  text-align: center;
+  background-color: #060402;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 1;
+  margin-top: auto;
+  height: 30vh;
+}
+.app {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  color: blue;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.container_butoane {
+  display: flex;
+}
+.bara_programare {
+  width: 100%;
+  height: 15vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  color: blue;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #060402;
+  font-size: 4rem;
+  margin-right: 40px;
+}
+.bara_programare:hover {
+  cursor: pointer;
+  color: aqua;
+}
+.telefon {
+  width: 30%;
+  height: 15vh;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #060402;
+  font-size: 4rem;
+  margin-right: 120px;
+  margin-left: 40px;
+  color: aliceblue;
+}
+.telefon:hover {
+  cursor: pointer;
+  color: aqua;
+}
+.buton_Meniu {
+  position: absolute;
+  top: 25%;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 44px;
+  cursor: pointer;
+  text-align: left;
+  color: chartreuse;
+}
+.titlu_formular {
+  display: flex;
+  justify-content: inherit;
+  font-size: 38px;
+  font-weight: bold;
+}
+.input {
+  display: flex;
+  width: 80%; /* Ocupă întreaga lățime disponibilă */
+  height: 50px;
+  margin-bottom: 10px;
+  flex-direction: column; /* Așează input-urile vertical */
+  align-items: center;
+  font-size: 25px;
+}
+.container_input {
+  display: flex;
+  flex-direction: column; /* Așează input-urile vertical */
+  align-items: center;
+}
+input::placeholder {
+  font-size: 18px; /* Alegeți mărimea dorită pentru placeholder */
+  color: #999; /* Alegeți culoarea dorită pentru placeholder */
+}
+.date_programare {
+  font-size: 32px;
+  font-weight: bold;
 }
