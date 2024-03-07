@@ -1,3 +1,6 @@
+Beauty Salon Appointment System
+This project is a web application for managing appointments in a beauty salon. Users can fill out a form with their personal details and preferred service, select a date and time, and submit their appointment request. The system validates the input data and displays any missing fields or errors to the user. Once all fields are completed, the appointment is submitted successfully, and the user receives a confirmation message.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
