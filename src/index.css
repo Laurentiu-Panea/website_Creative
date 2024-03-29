@@ -1,5 +1,8 @@
 html {
   font-size: 62.5%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,6 +11,9 @@ body {
   color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -22,21 +28,35 @@ h1 {
   padding: 2.4rem 1;
   margin-top: auto;
   height: 30vh;
+  /* font-size: 7rem;
+  text-transform: none; */
 }
+.rotatie {
+  display: inline-block;
+  transform: rotate(-30deg);
+  font-size: 70px;
+  color: blue;
+  /* letter-spacing: 1px; */
+}
+
 .app {
   position: relative;
   width: 100%;
   height: 20vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  color: blue;
+  color: rgb(250, 250, 252);
   text-align: center;
   align-items: center;
   display: flex;
   justify-content: center;
+  margin-bottom: 1px;
+  letter-spacing: 0.1px;
 }
 .container_butoane {
   display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .bara_programare {
   width: 100%;
@@ -55,6 +75,10 @@ h1 {
 .bara_programare:hover {
   cursor: pointer;
   color: aqua;
+}
+.bara_programare a {
+  color: red; /* Adaugă culoarea textului roșu */
+  text-decoration: none; /* Elimină sublinierea link-ului */
 }
 .telefon {
   width: 30%;
@@ -84,6 +108,17 @@ h1 {
   text-align: left;
   color: chartreuse;
 }
+.buton {
+  font-size: 20px;
+  background-color: rgb(172, 246, 246);
+  height: 65px;
+  width: 230px;
+}
+/* "a" permite proprietatii css doar pentru buton,nu si cele mostenite de la parinte*/
+.buton a {
+  color: red; /* Adaugă culoarea textului roșu */
+  text-decoration: none; /* Elimină sublinierea link-ului */
+}
 .titlu_formular {
   display: flex;
   justify-content: inherit;
@@ -105,10 +140,191 @@ h1 {
   align-items: center;
 }
 input::placeholder {
-  font-size: 18px; /* Alegeți mărimea dorită pentru placeholder */
-  color: #999; /* Alegeți culoarea dorită pentru placeholder */
+  font-size: 18px; /* Alege mărimea dorită pentru placeholder */
+  color: #999; /* Alege culoarea dorită pentru placeholder */
 }
 .date_programare {
   font-size: 32px;
   font-weight: bold;
+}
+.menu {
+  position: absolute;
+  width: 35%;
+  height: 500px;
+  top: 75%;
+  left: 30px;
+  font-size: 52px;
+  font-weight: bold;
+  text-align: left;
+  background-color: rgb(9, 225, 249);
+  z-index: 9; /* Este superioarul oricareia altui element din pagina principala */
+}
+
+.poza-logo {
+  background-image: url("/public/CreativeBeautyStudio.jpg");
+  background-size: cover; /* Acest lucru va asigura că imaginea se va potrivi în div */
+  height: 110px; /* Înălțimea și lățimea pot fi ajustate în funcție de nevoile dvs. */
+  width: 115px;
+  position: absolute;
+  margin-left: 1050px;
+  transition: transform 0.3s ease; /* Acest lucru va asigura o tranziție lină atunci când imaginea se mărește */
+  border-radius: 50%;
+}
+.poza-logo:hover {
+  transform: scale(
+    1.3
+  ); /* Acest lucru va mări imaginea cu 20% atunci când treceți cu mouse-ul peste ea */
+}
+.hair-page {
+  background-image: url("/public/hair.jpg");
+  background-size: cover; /* Face ca imaginea să acopere întregul container */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 50px; /* Adăuga padding pentru a separa textul de margine */
+  color: rgb(105, 218, 246);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.hair-text-title {
+  font-size: 50px;
+}
+.hair-text {
+  max-width: 50%; /* Setează lățimea maximă la 50% */
+  text-align: left;
+  /* font-size: 25px; */
+}
+.manichiura-page {
+  background-image: url("/public/manichiura.jpg");
+  background-size: cover; /* Face ca imaginea să acopere întregul container */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 50px; /* Adăuga padding pentru a separa textul de margine */
+  color: rgb(105, 218, 246);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.manichiura-text-title {
+  font-size: 50px;
+}
+.manichiura-text {
+  max-width: 50%; /* Setează lățimea maximă la 50% */
+  text-align: left;
+}
+.cosmetica-page {
+  background-image: url("/public/cosmetica&makeup.jpg");
+  background-size: cover; /* Face ca imaginea să acopere întregul container */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 50px; /* Adăuga padding pentru a separa textul de margine */
+  color: rgb(105, 218, 246);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.cosmetica-text-title {
+  font-size: 50px;
+}
+.cosmetica-text {
+  max-width: 50%; /* Setează lățimea maximă la 50% */
+  text-align: left;
+}
+.nume-persoane {
+  color: crimson;
+}
+.home-container {
+  background-image: url("/public/imagine_fundal_home.jpg"); /* Specifica calea către imaginea dorită */
+  background-size: cover; /* Face ca imaginea să acopere întregul container */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 50px; Adăuga padding pentru a separa textul de margine */
+  color: rgba(145, 226, 244, 0.8);
+  height: 100%;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.home-title {
+  text-align: center; /* Suprascriere a alinierii textului la centrul paginii */
+  /* background-color: white; */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 1;
+  margin-bottom: -10px;
+  height: 30vh;
+  font-weight: bold;
+}
+
+.home-subtitle {
+  font-weight: bold;
+  font-size: 44px;
+  margin-top: -60px;
+  margin-bottom: 10px;
+}
+
+.home-description {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.header-links-container {
+  position: absolute; /* Poziționăm containerul relativ la elementul .app */
+  bottom: 0; /* Afișăm linkurile sub textul "Creative Beauty Studio" */
+  left: 50%; /* Centrăm linkurile în raport cu textul */
+  transform: translateX(-50%); /* Centrăm linkurile orizontal */
+  display: flex;
+}
+
+.header-link {
+  font-size: 19px;
+  color: #8aeef6;
+  text-decoration: none;
+  margin: 0 50px; /* Adăugăm un spațiu între linkuri */
+  letter-spacing: 1px; /* Adăugăm spațiu între litere */
+  transition: transform 0.3s ease;
+}
+.header-link:hover {
+  transform: scale(
+    1.8
+  ); /* Acest lucru va mări imaginea cu 20% atunci când treceți cu mouse-ul peste ea */
+  color: deepskyblue;
+}
+.header-contact-container {
+  position: absolute; /* Poziționăm containerul relativ la elementul .app */
+  top: 0; /* Afișăm linkurile sub textul "Creative Beauty Studio" */
+  left: 50%; /* Centrăm linkurile în raport cu textul */
+  transform: translateX(-50%); /* Centrăm linkurile orizontal */
+  display: flex;
+}
+.header-contact-link {
+  font-size: 19px;
+  color: #f72930d6;
+  text-decoration: none;
+  margin: 0 50px; /* Adăugăm un spațiu între linkuri */
+  letter-spacing: 1px; /* Adăugăm spațiu între litere */
+  transition: transform 0.3s ease;
+}
+.header-contact-link:hover {
+  transform: scale(
+    1.8
+  ); /* Acest lucru va mări imaginea cu 20% atunci când treceți cu mouse-ul peste ea */
+  cursor: pointer;
+  color: chartreuse;
 }
