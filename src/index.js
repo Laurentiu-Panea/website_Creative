@@ -8,28 +8,23 @@ import {
   Navigate,
 } from "react-router-dom";
 import About from "./components/About";
-import BaraProgramare from "./components/BaraProgramare";
-import FormularProgramare from "./components/FormularProgramare";
+import AppointmentForm from "./components/AppointmentForm";
 import Home from "./components/Home";
-import Coafor from "./components/Coafor";
-import Manichiura from "./components/Manichiura";
-import Cosmetica from "./components/Cosmetica";
+import HairPage from "./components/HairPage";
+import ManicureAndPedicurePage from "./components/ManicureAndPedicurePage";
+import CosmeticsAndMakeUpPage from "./components/CosmeticsAndMakeUpPage";
 
-// varianta noua de routing,care permite data fetching de la API's
+// the new routing option, which allows data fetching from API's
 
 const router = createBrowserRouter([
   {
-    // aici la path-ul "/Home" pentru ca vreau sa fie afisat in bara url acest lucru
+    // here at the path "/Home" because I want this to be displayed in the url bar
     path: "/Home",
     element: <Home />,
   },
   {
-    path: "/Formular-programare",
-    element: <FormularProgramare />,
-  },
-  {
-    path: "/Bara-programare",
-    element: <BaraProgramare />,
+    path: "/AppointmentForm",
+    element: <AppointmentForm />,
   },
   {
     path: "/About",
@@ -37,18 +32,18 @@ const router = createBrowserRouter([
   },
   {
     path: "/Coafor",
-    element: <Coafor />,
+    element: <HairPage />,
   },
   {
     path: "/Manichiura",
-    element: <Manichiura />,
+    element: <ManicureAndPedicurePage />,
   },
   {
-    path: "/Cosmetica",
-    element: <Cosmetica />,
+    path: "/Cosmetica&MakeUp",
+    element: <CosmeticsAndMakeUpPage />,
   },
   {
-    //acest Navigator imi deschide pagina la "/Home",neavand la deschiderea aplicatiei ruta"/Home" prestabilita
+    //this Navigator opens my page at "/Home", not having the default "/Home" route when opening the application
     path: "/",
     element: <Navigate to="/Home" />,
   },
@@ -61,7 +56,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Logo() {
@@ -7,14 +7,14 @@ export default function Logo() {
   function handleClick(e) {
     e.preventDefault();
     e.stopPropagation();
-    // atunci când se face clic pe butonul de meniu,
-    // se declanșează două evenimente de clic: unul pe butonul de meniu și unul pe fereastra globală,
-    // deoarece evenimentul de clic pe butonul de meniu se propagă la fereastra globală,
-    // ambele evenimente de clic sunt declanșate aproape simultan.
-    //  e.stopPropagation() -- "opresete"  evenimentul de clic să se propage la fereastra globală, astfel încât meniul rămâne deschis.
+    // when the menu button is clicked,
+    // fire two click events: one on the menu button and one on the global window,
+    // because the menu button click event propagates to the global window,
+    // both click events are fired almost simultaneously.
+    // e.stopPropagation() -- "stops" the click event from propagating to the global window so the menu remains open.
     setIsTrue(!isTrue);
   }
-  //acest useEffect este pt a disparea meniul(afisat)cand se face click inafara lui,oriunde pe pagina
+  //this useEffect is to make the (displayed) menu disappear when you click outside it, anywhere on the page
   useEffect(() => {
     function handleOutsideClick(event) {
       if (isTrue && event.target.closest(".menu") === null) {
@@ -31,15 +31,15 @@ export default function Logo() {
   function Menu() {
     return (
       <div className="menu">
-        {/* {aici la path-ul "/Home" pentru ca vreau sa fie afisat in bara url acest lucru} */}
+        {/* {here at the path "/Home" because I want this to be displayed in the url bar} */}
         <Link to="/Home">Home</Link>
-        {/* {"a"-tag,face refresh inainte sa arate pagina,face pt Html & Js inca o data} */}
-        {/* {<Link/> - NU face refresh ci face routing client-side,tranzitie instanta} */}
+        {/* {"a"-tag, refreshish before showing the page, do it for Html & Js one more time} */}
+        {/* {<Link/> -It does NOT refresh but does client-side routing, instant transition} */}
 
         {/* <a href="/Home">Home</a> */}
-        <br />
+        {/* <br />
         <Link to="/https://github.com/Laurentiu-Panea">GitHub Repo</Link>
-        {/* <a href="https://github.com/Laurentiu-Panea">GitHub Repo</a> */}
+        <a href="https://github.com/Laurentiu-Panea">GitHub Repo</a> */}
         <br />
         <Link to="/About">About</Link>
         {/* <a href="/About">About</a> */}
@@ -47,11 +47,11 @@ export default function Logo() {
         <Link to="/Coafor">Coafor</Link>
         {/* <a href="/Coafor">Coafor </a> */}
         <br />
-        <Link to="/Formular-programare">Programare</Link>
+        <Link to="/AppointmentForm">Programare</Link>
         <br />
         <Link to="/Manichiura">Manichiura</Link>
         <br />
-        <Link to="/Cosmetica">Cosmetica</Link>
+        <Link to="/Cosmetica&MakeUp">Cosmetica</Link>
       </div>
     );
   }
@@ -59,15 +59,17 @@ export default function Logo() {
   return (
     <>
       <h1 className="app">
-        <button className="buton_Meniu" onClick={handleClick}>
+        <button className="menu_button" onClick={handleClick}>
           {isTrue ? "✖" : "☰"}
         </button>
         {isTrue && <Menu />}
         <a href="/" style={{ textDecoration: "none", color: "inherit" }}>
-          <p>Creativ<span className="rotatie">E</span> Beauty Studio</p>
+          <p>
+            Creativ<span className="letter_rotation">E</span> Beauty Studio
+          </p>
         </a>
-        <Link className="poza-logo" to="/About"></Link>
-        {/* <div className="poza-logo" alt=""></div> */}
+        <Link className="logo_picture" to="/About"></Link>
+        {/* <div className="logo_picture" alt=""></div> */}
         <div className="header-links-container">
           {/* <Link className="header-link" to="/About">
             About
@@ -78,7 +80,7 @@ export default function Logo() {
           <Link className="header-link" to="/Manichiura">
             Manichiura
           </Link>
-          <Link className="header-link" to="/Cosmetica">
+          <Link className="header-link" to="/Cosmetica&MakeUp">
             Cosmetica&Makeup
           </Link>
         </div>
@@ -90,7 +92,7 @@ export default function Logo() {
           >
             Telefon: 0745062538
           </p>
-          <Link className="header-contact-link" to="/Formular-programare">
+          <Link className="header-contact-link" to="/AppointmentForm">
             Programeaza-te!
           </Link>
         </div>

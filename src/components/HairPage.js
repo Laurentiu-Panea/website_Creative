@@ -1,7 +1,7 @@
-import ButonProgramare from "./ButonProgramare";
+import AppointmentButton from "./AppointmentButton";
 import Logo from "./Logo";
 
-export default function Coafor() {
+export default function HairPage() {
   return (
     <>
       <Logo />
@@ -10,7 +10,7 @@ export default function Coafor() {
           Echipa Coaforului Creative Beauty Studio Reghin :
         </h2>
         <div className="hair-text">
-          <h2 className="nume-persoane">Man Delia : 074xxxxxxx</h2>
+          <h2 className="person-name">Man Delia : 074xxxxxxx</h2>
           <h5>
             {" "}
             Delia is the main contact for Coafor. She can be reached on her
@@ -23,7 +23,7 @@ export default function Coafor() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum."
           </h5>
-          <h2 className="nume-persoane">Eny : 074xxxxxxx</h2>{" "}
+          <h2 className="person-name">Eny : 074xxxxxxx</h2>{" "}
           <h5>
             {" "}
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -34,7 +34,7 @@ export default function Coafor() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum."
           </h5>
-          <h2 className="nume-persoane">Maria: 074xxxxxxx</h2>{" "}
+          <h2 className="person-name">Maria: 074xxxxxxx</h2>{" "}
           <h5>
             {" "}
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -45,7 +45,7 @@ export default function Coafor() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum."
           </h5>
-          <ButonProgramare />
+          <AppointmentButton />
         </div>
       </div>
     </>

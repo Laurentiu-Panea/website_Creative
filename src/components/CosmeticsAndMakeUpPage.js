@@ -1,16 +1,16 @@
-import ButonProgramare from "./ButonProgramare";
+import AppointmentButton from "./AppointmentButton";
 import Logo from "./Logo";
 
-export default function Cosmetica() {
+export default function CosmeticsAndMakeUpPage() {
   return (
     <>
       <Logo />
-      <div className="cosmetica-page">
-        <h2 className="cosmetica-text-title">
+      <div className="cosmetics-makeup-page">
+        <h2 className="cosmetics-makeup-text-title">
           Cosmetica & Make-Up Creative Beauty Studio Reghin :
         </h2>
-        <div className="cosmetica-text">
-          <h2 className="nume-persoane">Ioana : 074xxxxxxx</h2>{" "}
+        <div className="cosmetics-makeup-text">
+          <h2 className="person-name">Ioana : 074xxxxxxx</h2>{" "}
           <h5>
             {" "}
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -21,7 +21,7 @@ export default function Cosmetica() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum."
           </h5>
-          <ButonProgramare />
+          <AppointmentButton />
         </div>
       </div>
     </>

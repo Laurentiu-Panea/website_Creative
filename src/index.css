@@ -31,7 +31,7 @@ h1 {
   /* font-size: 7rem;
   text-transform: none; */
 }
-.rotatie {
+.letter_rotation {
   display: inline-block;
   transform: rotate(-30deg);
   font-size: 70px;
@@ -53,12 +53,12 @@ h1 {
   margin-bottom: 1px;
   letter-spacing: 0.1px;
 }
-.container_butoane {
+/* .container_butoane {
   display: flex;
   margin-bottom: 10px;
   margin-top: 10px;
-}
-.bara_programare {
+} */
+/* .bara_programare {
   width: 100%;
   height: 15vh;
   display: grid;
@@ -77,8 +77,8 @@ h1 {
   color: aqua;
 }
 .bara_programare a {
-  color: red; /* Adaugă culoarea textului roșu */
-  text-decoration: none; /* Elimină sublinierea link-ului */
+  color: red; 
+  text-decoration: none; 
 }
 .telefon {
   width: 30%;
@@ -96,8 +96,8 @@ h1 {
 .telefon:hover {
   cursor: pointer;
   color: aqua;
-}
-.buton_Meniu {
+} */
+.menu_button {
   position: absolute;
   top: 25%;
   left: 20px;
@@ -108,18 +108,18 @@ h1 {
   text-align: left;
   color: chartreuse;
 }
-.buton {
+.appointment_button {
   font-size: 20px;
   background-color: rgb(172, 246, 246);
   height: 65px;
   width: 230px;
 }
-/* "a" permite proprietatii css doar pentru buton,nu si cele mostenite de la parinte*/
-.buton a {
-  color: red; /* Adaugă culoarea textului roșu */
-  text-decoration: none; /* Elimină sublinierea link-ului */
+/*"a" allows css properties only for the button, not the ones inherited from the parent*/
+.appointment_button a {
+  color: red; /* Add red text color */
+  text-decoration: none; /*  Remove link underlining */
 }
-.titlu_formular {
+.form_title {
   display: flex;
   justify-content: inherit;
   font-size: 38px;
@@ -127,63 +127,63 @@ h1 {
 }
 .input {
   display: flex;
-  width: 80%; /* Ocupă întreaga lățime disponibilă */
+  width: 80%; /* It occupies the entire available width*/
   height: 50px;
   margin-bottom: 10px;
-  flex-direction: column; /* Așează input-urile vertical */
+  flex-direction: column; /* Places inputs vertically */
   align-items: center;
   font-size: 25px;
 }
 .container_input {
   display: flex;
-  flex-direction: column; /* Așează input-urile vertical */
+  flex-direction: column; /* Places inputs vertically */
   align-items: center;
 }
 input::placeholder {
-  font-size: 18px; /* Alege mărimea dorită pentru placeholder */
-  color: #999; /* Alege culoarea dorită pentru placeholder */
+  font-size: 18px; /* Choose the size you want for the placeholder */
+  color: #999; /*Choose the color you want for the placeholder */
 }
-.date_programare {
+/* .date_programare {
   font-size: 32px;
   font-weight: bold;
-}
+} */
 .menu {
   position: absolute;
   width: 35%;
-  height: 500px;
+  height: 400px;
   top: 75%;
   left: 30px;
   font-size: 52px;
   font-weight: bold;
   text-align: left;
   background-color: rgb(9, 225, 249);
-  z-index: 9; /* Este superioarul oricareia altui element din pagina principala */
+  z-index: 9; /* It is superior to any other element on the main page */
 }
 
-.poza-logo {
+.logo_picture {
   background-image: url("/public/CreativeBeautyStudio.jpg");
-  background-size: cover; /* Acest lucru va asigura că imaginea se va potrivi în div */
-  height: 110px; /* Înălțimea și lățimea pot fi ajustate în funcție de nevoile dvs. */
+  background-size: cover; /* This will ensure that the image will fit inside the div */
+  height: 110px; /* The height and width can be adjusted according to your needs. */
   width: 115px;
   position: absolute;
   margin-left: 1050px;
-  transition: transform 0.3s ease; /* Acest lucru va asigura o tranziție lină atunci când imaginea se mărește */
+  transition: transform 0.3s ease; /* This will ensure a smooth transition when the image zooms in */
   border-radius: 50%;
 }
-.poza-logo:hover {
+.logo_picture:hover {
   transform: scale(
     1.3
-  ); /* Acest lucru va mări imaginea cu 20% atunci când treceți cu mouse-ul peste ea */
+  ); /* This will enlarge the image by 20% when you hover over it */
 }
 .hair-page {
   background-image: url("/public/hair.jpg");
-  background-size: cover; /* Face ca imaginea să acopere întregul container */
+  background-size: cover; /* Makes the image cover the entire container */
   background-position: center;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
-  padding: 50px; /* Adăuga padding pentru a separa textul de margine */
+  padding: 50px; /* Add padding to separate the text from the border */
   color: rgb(105, 218, 246);
   height: 100%;
   width: 100%;
@@ -193,64 +193,64 @@ input::placeholder {
   font-size: 50px;
 }
 .hair-text {
-  max-width: 50%; /* Setează lățimea maximă la 50% */
+  max-width: 50%; /* Set max width to 50% */
   text-align: left;
   /* font-size: 25px; */
 }
-.manichiura-page {
-  background-image: url("/public/manichiura.jpg");
+.manicure_pedicure-page {
+  background-image: url("/public/manicure_pedicure.jpg");
+  background-size: cover; /* Makes the image cover the entire container */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 50px; /* Add padding to separate the text from the border */
+  color: rgb(105, 218, 246);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.manicure_pedicure-text-title {
+  font-size: 50px;
+}
+.manicure_pedicure-text {
+  max-width: 50%; /* Set max width to 50% */
+  text-align: left;
+}
+.cosmetics-makeup-page {
+  background-image: url("/public/cosmetics&makeup.jpg");
   background-size: cover; /* Face ca imaginea să acopere întregul container */
   background-position: center;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
-  padding: 50px; /* Adăuga padding pentru a separa textul de margine */
+  padding: 50px; /* Add padding to separate the text from the border*/
   color: rgb(105, 218, 246);
   height: 100%;
   width: 100%;
   text-align: center;
 }
-.manichiura-text-title {
+.cosmetics-makeup-text-title {
   font-size: 50px;
 }
-.manichiura-text {
-  max-width: 50%; /* Setează lățimea maximă la 50% */
+.cosmetics-makeup-text {
+  max-width: 50%; /* Set max width to 50% */
   text-align: left;
 }
-.cosmetica-page {
-  background-image: url("/public/cosmetica&makeup.jpg");
-  background-size: cover; /* Face ca imaginea să acopere întregul container */
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
-  padding: 50px; /* Adăuga padding pentru a separa textul de margine */
-  color: rgb(105, 218, 246);
-  height: 100%;
-  width: 100%;
-  text-align: center;
-}
-.cosmetica-text-title {
-  font-size: 50px;
-}
-.cosmetica-text {
-  max-width: 50%; /* Setează lățimea maximă la 50% */
-  text-align: left;
-}
-.nume-persoane {
+.person-name {
   color: crimson;
 }
 .home-container {
-  background-image: url("/public/imagine_fundal_home.jpg"); /* Specifica calea către imaginea dorită */
-  background-size: cover; /* Face ca imaginea să acopere întregul container */
+  background-image: url("/public/home_backround_image.jpg"); /*Specify the path to the desired image */
+  background-size: cover; /* Makes the image cover the entire container */
   background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 50px; Adăuga padding pentru a separa textul de margine */
+  /* padding: 50px; Add padding to separate the text from the border */
   color: rgba(145, 226, 244, 0.8);
   height: 100%;
   width: 100%;
@@ -258,7 +258,7 @@ input::placeholder {
 }
 
 .home-title {
-  text-align: center; /* Suprascriere a alinierii textului la centrul paginii */
+  text-align: center; /* Override the alignment of the text to the center of the page */
   /* background-color: white; */
   font-family: "Times New Roman", Times, serif;
   font-size: 6rem;
@@ -285,10 +285,10 @@ input::placeholder {
   text-align: center;
 }
 .header-links-container {
-  position: absolute; /* Poziționăm containerul relativ la elementul .app */
-  bottom: 0; /* Afișăm linkurile sub textul "Creative Beauty Studio" */
-  left: 50%; /* Centrăm linkurile în raport cu textul */
-  transform: translateX(-50%); /* Centrăm linkurile orizontal */
+  position: absolute; /* We position the container relative to the .app element */
+  bottom: 0; /* We display the links under the text "Creative Beauty Studio" */
+  left: 50%; /* We center the links in relation to the text */
+  transform: translateX(-50%); /* We center the links horizontally */
   display: flex;
 }
 
@@ -296,35 +296,33 @@ input::placeholder {
   font-size: 19px;
   color: #8aeef6;
   text-decoration: none;
-  margin: 0 50px; /* Adăugăm un spațiu între linkuri */
-  letter-spacing: 1px; /* Adăugăm spațiu între litere */
+  margin: 0 50px; /* We add a space between the links */
+  letter-spacing: 1px; /*We add a space between the leters */
   transition: transform 0.3s ease;
 }
 .header-link:hover {
   transform: scale(
     1.8
-  ); /* Acest lucru va mări imaginea cu 20% atunci când treceți cu mouse-ul peste ea */
+  ); /* This will enlarge the image by 20% when you hover over it */
   color: deepskyblue;
 }
 .header-contact-container {
-  position: absolute; /* Poziționăm containerul relativ la elementul .app */
-  top: 0; /* Afișăm linkurile sub textul "Creative Beauty Studio" */
-  left: 50%; /* Centrăm linkurile în raport cu textul */
-  transform: translateX(-50%); /* Centrăm linkurile orizontal */
+  position: absolute; /*  We position the container relative to the .app element */
+  top: 0; /* We display the links under the text "Creative Beauty Studio" */
+  left: 50%; /* We center the links in relation to the text*/
+  transform: translateX(-50%); /* We center the links horizontally */
   display: flex;
 }
 .header-contact-link {
   font-size: 19px;
   color: #f72930d6;
   text-decoration: none;
-  margin: 0 50px; /* Adăugăm un spațiu între linkuri */
-  letter-spacing: 1px; /* Adăugăm spațiu între litere */
+  margin: 0 50px; /* We add a space between the links */
+  letter-spacing: 1px; /* We add a space between the leters */
   transition: transform 0.3s ease;
 }
 .header-contact-link:hover {
-  transform: scale(
-    1.8
-  ); /* Acest lucru va mări imaginea cu 20% atunci când treceți cu mouse-ul peste ea */
+  transform: scale(1.8);
   cursor: pointer;
   color: chartreuse;
 }

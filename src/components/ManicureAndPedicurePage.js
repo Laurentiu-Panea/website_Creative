@@ -1,16 +1,16 @@
-import ButonProgramare from "./ButonProgramare";
+import AppointmentButton from "./AppointmentButton";
 import Logo from "./Logo";
 
-export default function Manichiura() {
+export default function ManicureAndPedicurePage() {
   return (
     <>
       <Logo />
-      <div className="manichiura-page">
-        <h2 className="manichiura-text-title">
+      <div className="manicure_pedicure-page">
+        <h2 className="manicure_pedicure-text-title">
           Manichiura Creative Beauty Studio Reghin :
         </h2>
-        <div className="hair-text">
-          <h2 className="nume-persoane">Teodora : 074xxxxxxx</h2>{" "}
+        <div className="manicure_pedicure-text">
+          <h2 className="person-name">Teodora : 074xxxxxxx</h2>{" "}
           <h5>
             {" "}
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -21,7 +21,7 @@ export default function Manichiura() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum."
           </h5>
-          <ButonProgramare />
+          <AppointmentButton />
         </div>
       </div>
     </>

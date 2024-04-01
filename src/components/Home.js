@@ -1,13 +1,12 @@
 import React from "react";
-import BaraProgramare from "./BaraProgramare";
-import ButonProgramare from "./ButonProgramare";
+import AppointmentButton from "./AppointmentButton";
 import Logo from "./Logo";
 
 export default function Home() {
   return (
     <>
       <Logo />
-      {/* <BaraProgramare /> */}
+
       <div className="home-container">
         <h2 className="home-title">Creative Beauty Studio</h2>
         <h2 className="home-subtitle">Salon de înfrumusețare Reghin</h2>
@@ -22,7 +21,7 @@ export default function Home() {
           alcătuiesc echipa dar și de la cele mai mici detalii, alese și
           aranjate cu grijă, pentru a crea un ambient deosebit.
         </h4>
-        <ButonProgramare />
+        <AppointmentButton />
       </div>
     </>
   );

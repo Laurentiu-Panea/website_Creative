@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Logo from "./Logo";
-export default function FormularProgramare() {
+export default function AppointmentForm() {
   const [programare, setProgramare] = useState({
     numePrenume: "",
     numarTelefon: "",
@@ -14,11 +14,11 @@ export default function FormularProgramare() {
   const [mesajConfirmare, setMesajConfirmare] = useState("");
 
   const handleInputChange = (event) => {
-    // această linie extrage două proprietăți din obiectul "event.target",
-    //  elementul DOM a declanșat evenimentul.
-    // proprietatea "name" reprezintă atributul "name" al elementului DOM,adica "input"-urile si "select"
-    // care de obicei este setat pentru a identifica câmpul de intrare în mod unic.
-    // Proprietatea "value" reprezintă valoarea introdusă în câmpul de intrare în momentul declanșării evenimentului.
+    // this line extracts two properties from the "event.target" object,
+    // the DOM element fired the event.
+    // the "name" property represents the "name" attribute of the DOM element, i.e. the "input" and "select"
+    // which is usually set to uniquely identify the input field.
+    // The "value" property represents the value entered into the input field when the event is fired.
     const { name, value } = event.target;
     setProgramare({ ...programare, [name]: value });
   };
@@ -26,7 +26,7 @@ export default function FormularProgramare() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Verificare dacă toate câmpurile sunt completate
+    // Check if all fields are filled
     const campuri = [
       "numePrenume",
       "numarTelefon",
@@ -46,8 +46,8 @@ export default function FormularProgramare() {
       setMesajConfirmare("Programarea a fost trimisă cu succes!");
     }
 
-    // Salvare programare și resetare formular
-    // Aici puteți adăuga logica de trimitere a programării către server sau de salvare în altă parte
+    // Save appointment and reset form
+    // Here it can be add the logic to send the schedule to the server or save it elsewhere
     setEroare("");
     setCampuriLipsa([]);
     console.log("Programarea trimisă:", programare);
@@ -57,9 +57,7 @@ export default function FormularProgramare() {
     <>
       <Logo />
       <form className="container_input" onSubmit={handleSubmit}>
-        <p className="titlu_formular">
-          Formular programari salon înfrumusețare
-        </p>
+        <p className="form_title">Formular programari salon înfrumusețare</p>
         <input
           className="input"
           placeholder="Nume Prenume"

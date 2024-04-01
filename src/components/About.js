@@ -1,4 +1,4 @@
-import ButonProgramare from "./ButonProgramare";
+import AppointmentButton from "./AppointmentButton";
 import Logo from "./Logo";
 
 function About() {
@@ -31,7 +31,7 @@ function About() {
         vizită este o experiență de neuitat.
       </div>
       <div>
-        <ButonProgramare />
+        <AppointmentButton />
       </div>
     </>
   );
