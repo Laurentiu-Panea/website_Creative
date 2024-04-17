@@ -1,11 +1,39 @@
+import React from "react";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 import AppointmentButton from "./AppointmentButton";
 import Logo from "./Logo";
 
 export default function HairPage() {
+  const images = [
+    {
+      original: "/public/element5-digital-WCPg9ROZbM0-unsplash.jpg",
+      thumbnail: "/public/element5-digital-WCPg9ROZbM0-unsplash.jpg",
+      description: "Coafura 1",
+    },
+    {
+      original: "/public/redhead1.jpg",
+      thumbnail: "/public/redhead1.jpg",
+      description: "Descriere pentru imaginea 2",
+    },
+    // Adaugă aici mai multe obiecte pentru fiecare imagine
+  ];
   return (
     <>
       <Logo />
       <div className="hair-page">
+        <div className="hair_section_services">
+          <h3>Servicii oferite</h3>
+          <p>
+            Coafura
+            <br />
+            Tratamente pentru par
+            <br />
+            Botox
+            <br />
+            Fillers
+          </p>
+        </div>
         <h2 className="hair-text-title">
           Echipa Coaforului Creative Beauty Studio Reghin :
         </h2>
@@ -46,6 +74,9 @@ export default function HairPage() {
             culpa qui officia deserunt mollit anim id est laborum."
           </h5>
           <AppointmentButton />
+        </div>
+        <div className="gallery-container">
+          <ImageGallery items={images} />
         </div>
       </div>
     </>
