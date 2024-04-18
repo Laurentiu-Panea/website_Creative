@@ -16,7 +16,7 @@ export default function Home() {
           cu servicii de înfrumusețare profesionale!
         </h4>
         <h4 className="home-description">
-          Creactive Beauty Studio este locul unde facem totul pentru a dărui
+          Creative Beauty Studio este locul unde facem totul pentru a dărui
           bucurii și frumusețe. Frumusețea pornește de la oamenii care
           alcătuiesc echipa dar și de la cele mai mici detalii, alese și
           aranjate cu grijă, pentru a crea un ambient deosebit.

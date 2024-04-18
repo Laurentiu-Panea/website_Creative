@@ -20,7 +20,7 @@ h1 {
   text-align: center;
   background-color: #060402;
   font-family: "Times New Roman", Times, serif;
-  font-size: 6rem;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: 400;
   word-spacing: 30px;
@@ -31,6 +31,7 @@ h1 {
   /* font-size: 7rem;
   text-transform: none; */
 }
+
 .letter_rotation {
   display: inline-block;
   transform: rotate(-30deg);
@@ -52,6 +53,12 @@ h1 {
   justify-content: center;
   margin-bottom: 1px;
   letter-spacing: 0.1px;
+}
+.link_name_logo {
+  position: absolute;
+  text-align: left;
+  font-size: 40px;
+  margin-left: 5px;
 }
 .menu_button {
   position: absolute;
@@ -128,7 +135,8 @@ input::placeholder {
   ); /* This will enlarge the image by 20% when you hover over it */
 }
 .hair-page {
-  background-image: url("/public/hair.jpg");
+  /* background-image: url("/public/hair.jpg"); */
+  position: relative;
   background-size: cover; /* Makes the image cover the entire container */
   background-position: center;
   display: flex;
@@ -140,6 +148,19 @@ input::placeholder {
   height: 100%;
   width: 100%;
   text-align: center;
+}
+.hair-page::before {
+  content: "";
+  background-image: url("/public/hair.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute; /*  place the absolute pseudo-element over the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px); /*  apply the blur effect only to this additional layer */
+  z-index: -1; /*Make sure this layer is placed below the content of the .home container */
 }
 .hair-text-title {
   font-size: 50px;
@@ -149,8 +170,48 @@ input::placeholder {
   text-align: left;
   /* font-size: 25px; */
 }
+.hair_section_services {
+  position: absolute;
+  background-color: beige;
+  margin-left: 55%;
+  padding-top: 30%;
+  height: 150px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align:center; */
+}
+.gallery-container {
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.image-gallery {
+  max-width: 100%;
+  height: auto;
+  margin: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image-gallery:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image-gallery-description {
+  padding: 10px;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+}
+
 .manicure_pedicure-page {
-  background-image: url("/public/manicure_pedicure.jpg");
+  /* background-image: url("/public/manicure_pedicure.jpg"); */
+  position: relative;
   background-size: cover; /* Makes the image cover the entire container */
   background-position: center;
   display: flex;
@@ -163,6 +224,20 @@ input::placeholder {
   width: 100%;
   text-align: center;
 }
+.manicure_pedicure-page::before {
+  content: "";
+  background-image: url("/public/manicure_pedicure.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute; /*  place the absolute pseudo-element over the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px); /*  apply the blur effect only to this additional layer */
+  z-index: -1; /*Make sure this layer is placed below the content of the .home container */
+}
+
 .manicure_pedicure-text-title {
   font-size: 50px;
 }
@@ -171,7 +246,8 @@ input::placeholder {
   text-align: left;
 }
 .cosmetics-makeup-page {
-  background-image: url("/public/cosmetics&makeup.jpg");
+  /* background-image: url("/public/cosmetics&makeup.jpg"); */
+  position: relative;
   background-size: cover; /* Face ca imaginea să acopere întregul container */
   background-position: center;
   display: flex;
@@ -184,6 +260,19 @@ input::placeholder {
   width: 100%;
   text-align: center;
 }
+.cosmetics-makeup-page::before {
+  content: "";
+  background-image: url("/public/cosmetics&makeup.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute; /*  place the absolute pseudo-element over the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(4px); /*  apply the blur effect only to this additional layer */
+  z-index: -1; /*Make sure this layer is placed below the content of the .home container */
+}
 .cosmetics-makeup-text-title {
   font-size: 50px;
 }
@@ -195,7 +284,8 @@ input::placeholder {
   color: crimson;
 }
 .home-container {
-  background-image: url("/public/home_backround_image.jpg"); /*Specify the path to the desired image */
+  /*  background-image: url("/public/kyle-smith-4qYHqQqlwM4-unsplash.jpg"); Specify the path to the desired image */
+  position: relative;
   background-size: cover; /* Makes the image cover the entire container */
   background-position: center;
   display: flex;
@@ -203,10 +293,24 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   /* padding: 50px; Add padding to separate the text from the border */
-  color: rgba(145, 226, 244, 0.8);
+  color: rgb(4, 4, 4);
   height: 100%;
   width: 100%;
   margin-top: 0px;
+}
+/*  add a ::before pseudo-element to create an extra layer over the background */
+.home-container::before {
+  content: "";
+  background-image: url("/public/kyle-smith-4qYHqQqlwM4-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute; /*  place the absolute pseudo-element over the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px); /*  apply the blur effect only to this additional layer */
+  z-index: -1; /*Make sure this layer is placed below the content of the .home container */
 }
 
 .home-title {
@@ -278,7 +382,7 @@ input::placeholder {
   cursor: pointer;
   color: chartreuse;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   /* Adjust font size and padding for smaller screens */
   h1 {
     font-size: 4rem;
@@ -333,7 +437,7 @@ input::placeholder {
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   /* Further adjust font size and padding for smaller screens */
   h1 {
     font-size: 3rem;

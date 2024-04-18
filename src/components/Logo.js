@@ -63,8 +63,14 @@ export default function Logo() {
           {isTrue ? "✖" : "☰"}
         </button>
         {isTrue && <Menu />}
-        <a href="/" style={{ textDecoration: "none", color: "inherit" }}>
-          <p>
+        <a
+          href="/"
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+          }}
+        >
+          <p >
             Creativ<span className="letter_rotation">E</span> Beauty Studio
           </p>
         </a>
