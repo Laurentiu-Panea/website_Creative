@@ -7,27 +7,36 @@ import Logo from "./Logo";
 export default function HairPage() {
   const images = [
     {
-      original: "/public/element5-digital-WCPg9ROZbM0-unsplash.jpg",
-      thumbnail: "/public/element5-digital-WCPg9ROZbM0-unsplash.jpg",
-      description: "Coafura 1",
+      original: "/element5-digital-WCPg9ROZbM0-unsplash.jpg",
+      thumbnail: "/element5-digital-WCPg9ROZbM0-unsplash.jpg",
+      description: "Natural Look ",
     },
     {
-      original: "/public/redhead1.jpg",
-      thumbnail: "/public/redhead1.jpg",
-      description: "Descriere pentru imaginea 2",
+      original: "/redhead1.jpg",
+      thumbnail: "/redhead1.jpg",
+      description: "Readhead ",
     },
-    // Adaugă aici mai multe obiecte pentru fiecare imagine
   ];
   return (
     <>
       <Logo />
       <div className="hair-page">
-        <div className="hair_section_services">
-          <h3>Servicii oferite</h3>
+        <div className="hair_services_section">
+          <p>Servicii oferite</p>
           <p>
             Coafura
             <br />
             Tratamente pentru par
+            <br />
+            Coafat mireasă
+            <br />
+            Coafat special-extensii
+          </p>
+        </div>
+        <div className="hair_treatments_section">
+          <p>Tratamente pentru par</p>
+          <p>
+            Keratină
             <br />
             Botox
             <br />
@@ -75,6 +84,7 @@ export default function HairPage() {
           </h5>
           <AppointmentButton />
         </div>
+        <br></br>
         <div className="gallery-container">
           <ImageGallery items={images} />
         </div>

@@ -170,38 +170,47 @@ input::placeholder {
   text-align: left;
   /* font-size: 25px; */
 }
-.hair_section_services {
+.hair_services_section {
   position: absolute;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  right: 8%;
+  top: 20%;
+  transform: translateY(-50%);
   background-color: beige;
-  margin-left: 55%;
-  padding-top: 30%;
-  height: 150px;
   width: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* text-align:center; */
+  height: auto;
+}
+.hair_treatments_section {
+  position: absolute;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  right: 8%;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: beige;
+  width: 400px;
+  height: auto;
 }
 .gallery-container {
-  /* display: flex; */
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 20px;
+  /* width: 200px;
+  height: 200px; */
 }
-
 .image-gallery {
   max-width: 100%;
   height: auto;
   margin: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
 .image-gallery:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 .image-gallery-description {
   padding: 10px;
   text-align: center;
