@@ -23,7 +23,7 @@ h1 {
   font-size: 4rem;
   text-transform: uppercase;
   font-weight: 400;
-  word-spacing: 30px;
+  word-spacing: 20px;
   letter-spacing: -5px;
   padding: 2.4rem 1;
   margin-top: auto;
@@ -35,7 +35,7 @@ h1 {
 .letter_rotation {
   display: inline-block;
   transform: rotate(-30deg);
-  font-size: 70px;
+  font-size: 50px;
   color: blue;
   /* letter-spacing: 1px; */
 }
@@ -43,17 +43,23 @@ h1 {
 .app {
   position: relative;
   width: 100%;
-  height: 20vh;
+  height: 18vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  color: rgb(250, 250, 252);
+  color: rgb(255, 255, 255);
   text-align: center;
   align-items: center;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   margin-bottom: 1px;
   letter-spacing: 0.1px;
+  box-shadow: 3px 3px 11px rgb(52, 181, 251);
 }
+.app p {
+  margin-left: 90px;
+  font-size: 35px;
+}
+
 .link_name_logo {
   position: absolute;
   text-align: left;
@@ -62,24 +68,35 @@ h1 {
 }
 .menu_button {
   position: absolute;
-  top: 25%;
+  top: auto;
   left: 20px;
   background-color: transparent;
   border: none;
-  font-size: 44px;
+  font-size: 34px;
   cursor: pointer;
   text-align: left;
-  color: chartreuse;
+  color: rgb(255, 255, 255);
 }
 .appointment_button {
   font-size: 20px;
-  background-color: rgb(172, 246, 246);
+  background-color: rgb(0, 0, 0);
   height: 65px;
   width: 230px;
+  transition: all 1.3s ease; /* Animation Effect when the button is clicked! All changes are made within 1.3 second */
+  color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px rgb(52, 181, 251);
+  /* box-shadow: inset 2px 2px 4px rgba(68, 246, 112, 0.5); */
+  text-shadow: 2px 2px 2px rgba(244, 6, 6, 0.99);
+  border-radius: 10px;
+}
+.appointment_button:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px rgb(250, 14, 14);
 }
 /*"a" allows css properties only for the button, not the ones inherited from the parent*/
 .appointment_button a {
-  color: red; /* Add red text color */
+  color: inherit;
   text-decoration: none; /*  Remove link underlining */
 }
 .form_title {
@@ -125,9 +142,11 @@ input::placeholder {
   height: 110px; /* The height and width can be adjusted according to your needs. */
   width: 115px;
   position: absolute;
-  margin-left: 1050px;
+  margin-left: 1165px;
   transition: transform 0.3s ease; /* This will ensure a smooth transition when the image zooms in */
   border-radius: 50%;
+  /* box-shadow: 3px 3px 11px rgb(52, 181, 251); */
+  box-shadow: inset -2px -3px 6px rgba(60, 192, 249, 0.975);
 }
 .logo_picture:hover {
   transform: scale(
@@ -350,46 +369,52 @@ input::placeholder {
   text-align: center;
 }
 .header-links-container {
-  position: absolute; /* We position the container relative to the .app element */
-  bottom: 0; /* We display the links under the text "Creative Beauty Studio" */
-  left: 50%; /* We center the links in relation to the text */
-  transform: translateX(-50%); /* We center the links horizontally */
+  position: absolute; /*  position the container relative to the .app element */
+  bottom: 0; /*  display the links under the text "Creative Beauty Studio" */
+  left: 28%; /*  center the links in relation to the text */
+  transform: translateX(-50%); /*  center the links horizontally */
   display: flex;
 }
 
 .header-link {
-  font-size: 19px;
-  color: #8aeef6;
+  font-size: 15px;
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 50px; /* We add a space between the links */
-  letter-spacing: 1px; /*We add a space between the leters */
+  margin: 0 50px; /*  add a space between the links */
+  letter-spacing: 1px; /* add a space between the leters */
   transition: transform 0.3s ease;
 }
 .header-link:hover {
   transform: scale(
     1.8
   ); /* This will enlarge the image by 20% when you hover over it */
-  color: deepskyblue;
+  color: #00bfff;
 }
 .header-contact-container {
-  position: absolute; /*  We position the container relative to the .app element */
-  top: 0; /* We display the links under the text "Creative Beauty Studio" */
-  left: 50%; /* We center the links in relation to the text*/
-  transform: translateX(-50%); /* We center the links horizontally */
+  position: absolute; /*   position the container relative to the .app element */
+  right: -7%;
+  top: 50%;
+  transform: translateX(-50%); /*  center the links horizontally */
   display: flex;
 }
 .header-contact-link {
-  font-size: 19px;
-  color: #f72930d6;
+  font-size: 15px;
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 50px; /* We add a space between the links */
-  letter-spacing: 1px; /* We add a space between the leters */
+  margin: 0 10px; /*  add a space between the links */
+  word-spacing: 2px;
+  /*letter-spacing: 1px;  add a space between the leters */
   transition: transform 0.3s ease;
+  box-shadow: 3px 3px 11px rgb(52, 181, 251);
+}
+.header-contact-container p {
+  font-size: 16px;
 }
 .header-contact-link:hover {
   transform: scale(1.8);
   cursor: pointer;
-  color: chartreuse;
+  color: #00bfff;
+  background-color: black;
 }
 @media only screen and (max-width: 576px) {
   /* Adjust font size and padding for smaller screens */

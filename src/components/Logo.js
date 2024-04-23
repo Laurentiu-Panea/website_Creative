@@ -70,7 +70,7 @@ export default function Logo() {
             color: "inherit",
           }}
         >
-          <p >
+          <p>
             Creativ<span className="letter_rotation">E</span> Beauty Studio
           </p>
         </a>
@@ -96,10 +96,14 @@ export default function Logo() {
             className="header-contact-link"
             onClick={() => alert("formeaza 0745062538 ?")}
           >
-            Telefon: 0745062538
+            <img src="1807538_phone_icon.png" alt="Telefon" /> 0745062538
           </p>
           <Link className="header-contact-link" to="/AppointmentForm">
-            Programeaza-te!
+            <img
+              src="4975305_google_google map_location_location place_map_icon.png"
+              alt="Location"
+            />{" "}
+            Reghin, Mihai Viteazu 38
           </Link>
         </div>
       </h1>

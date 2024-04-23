@@ -22,6 +22,7 @@ export default function Home() {
           aranjate cu grijă, pentru a crea un ambient deosebit.
         </h4>
         <AppointmentButton />
+        <br></br>
       </div>
     </>
   );
