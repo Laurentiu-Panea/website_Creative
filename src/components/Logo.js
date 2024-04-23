@@ -98,13 +98,26 @@ export default function Logo() {
           >
             <img src="1807538_phone_icon.png" alt="Telefon" /> 0745062538
           </p>
-          <Link className="header-contact-link" to="/AppointmentForm">
+          <a
+            className="header-contact-link"
+            href="https://www.google.com/maps/search/?api=1&query=Reghin,+Mihai+Viteazu+34"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="4975305_google_google map_location_location place_map_icon.png"
               alt="Location"
             />{" "}
-            Reghin, Mihai Viteazu 38
-          </Link>
+            Reghin, Mihai Viteazu 34
+          </a>
+
+          {/* <Link className="header-contact-link" to="/AppointmentForm">
+            <img
+              src="4975305_google_google map_location_location place_map_icon.png"
+              alt="Location"
+            />{" "}
+            Reghin, Mihai Viteazu 34
+          </Link> */}
         </div>
       </h1>
     </>
