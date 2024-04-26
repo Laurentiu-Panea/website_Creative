@@ -58,51 +58,73 @@ export default function AppointmentForm() {
       <Logo />
       <form className="container_input" onSubmit={handleSubmit}>
         <p className="form_title">Formular programari salon înfrumusețare</p>
+
+        <label htmlFor="numePrenume">Nume Prenume *</label>
         <input
+          id="numePrenume"
+          type="text"
           className="input"
           placeholder="Nume Prenume"
-          name="numePrenume"
+          title="Nume Prenume"
+          name="numePrenume" // the "name" attribute is used in the input and select elements to uniquely identify the field to which it is attached. When an input or select event is fired, the "name" attribute is used to extract the corresponding value from the event.target object. This value is then used to update the state of the programare object using the handleInputChange function.
           value={programare.numePrenume}
           onChange={handleInputChange}
         />
+
+        <label htmlFor="numarTelefon">Număr telefon *</label>
         <input
+          id="numarTelefon"
+          type="tel"
           className="input"
           placeholder="Numar telefon"
+          title="Numar telefon"
           name="numarTelefon"
           value={programare.numarTelefon}
           onChange={handleInputChange}
         />
+        <label htmlFor="email">Email *</label>
         <input
+          id="email"
+          type="email"
           className="input"
           placeholder="Email"
+          title="email"
           name="email"
           value={programare.email}
           onChange={handleInputChange}
         />
+        <label htmlFor="data">Data programării *</label>
         <input
+          id="data"
           type="date"
           className="input"
           placeholder="Selecteaza data"
+          title="Selecteaza data dorita"
           name="data"
           value={programare.data}
           onChange={handleInputChange}
         />
+        <label htmlFor="ora">Ora programării *</label>
         <input
+          id="ora"
           type="time"
           className="input"
           placeholder="Selecteaza ora"
+          title="Selecteaza ora dorita"
           name="ora"
           value={programare.ora}
           onChange={handleInputChange}
         />
+        <label htmlFor="serviciuDorit">Alege serviciul dorit *</label>
         <select
+          id="serviciuDorit"
           className="input"
           title="Selectati serviciul dorit"
           name="serviciuDorit"
           value={programare.serviciuDorit}
           onChange={handleInputChange}
         >
-          <option value="">Alege serviciul dorit</option>
+          {/* <option value="">Alege serviciul dorit</option> */}
           <option value="Coafor">Coafor</option>
           <option value="Manichiura/Pedichiura">Manichiura/Pedichiura</option>
           <option value="Cosmetica">Cosmetica</option>
